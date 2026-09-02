@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AURA SMP | Minecraft Server</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#070707;
+    color:white;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:
+    radial-gradient(circle at center,#252525 0%,#070707 65%);
+}
+
+.logo{
+    font-size:70px;
+    font-weight:900;
+    letter-spacing:8px;
+    text-shadow:0 0 25px #ffffff;
+}
+
+.subtitle{
+    color:#aaa;
+    font-size:18px;
+    margin:15px 0 30px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border:1px solid #555;
+    border-radius:10px;
+    background:#151515;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 20px #777;
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+h2{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:35px;
+}
+
+.server{
+    background:#111;
+    border:1px solid #333;
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+}
+
+.online{
+    color:#7cff7c;
+    font-weight:bold;
+}
+
+.ip{
+    font-size:24px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #292929;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#aaa;
+    line-height:1.5;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+    border-top:1px solid #222;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME -->
+
+<div class="hero">
+
+<div>
+
+<div class="logo">AURA SMP</div>
+
+<div class="subtitle">
+Minecraft Survival • PvP • Events • Community
+</div>
+
+<div class="buttons">
+
+<a href="#join" class="btn">
+🎮 PLAY NOW
+</a>
+
+<a href="https://discord.com/" class="btn">
+💬 DISCORD
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SERVER -->
+
+<section id="join">
+
+<h2>🎮 JOIN AURA SMP</h2>
+
+<div class="server">
+
+<div class="online">
+● SERVER ONLINE
+</div>
+
+<div class="ip" id="serverIP">
+play.example.com
+</div>
+
+<p>Java + Bedrock</p>
+
+<br>
+
+<button class="btn" onclick="copyIP()">
+📋 COPY SERVER IP
+</button>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section>
+
+<h2>🔥 FEATURES</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚔️ PvP</h3>
+<p>Fight players and prove your skills.</p>
+</div>
+
+<div class="card">
+<h3>🌍 Survival</h3>
+<p>Build, explore and survive with friends.</p>
+</div>
+
+<div class="card">
+<h3>🏆 Events</h3>
+<p>Join exciting events and challenges.</p>
+</div>
+
+<div class="card">
+<h3>👥 Community</h3>
+<p>Meet players and enjoy the AURA SMP community.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RULES -->
+
+<section>
+
+<h2>📜 SERVER RULES</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>1️⃣ No Cheats</h3>
+<p>Hacks and unfair advantages are not allowed.</p>
+</div>
+
+<div class="card">
+<h3>2️⃣ Respect Players</h3>
+<p>Respect everyone and follow staff instructions.</p>
+</div>
+
+<div class="card">
+<h3>3️⃣ No Griefing</h3>
+<p>Do not destroy other players' builds.</p>
+</div>
+
+<div class="card">
+<h3>4️⃣ Have Fun</h3>
+<p>Enjoy the server and play fair.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 AURA SMP • Minecraft Community
+
+</footer>
+
+
+<script>
+
+function copyIP(){
+
+const ip = document.getElementById("serverIP").innerText;
+
+navigator.clipboard.writeText(ip);
+
+alert("Server IP copied!");
+
+}
+
+</script>
+
+</body>
+  </html>
